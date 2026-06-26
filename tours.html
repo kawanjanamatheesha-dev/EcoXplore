@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View our sustainable and eco-friendly tour packages including hiking, camping, mountain biking, and white water rafting.">
+    <title>Tours & Packages | EcoXplore Adventures</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo" aria-label="EcoXplore Adventures Home">
+                <span>Eco</span>Xplore 🌲
+            </a>
+            
+            <nav id="nav-menu" aria-label="Main Navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="tours.html" class="active">Tours & Packages</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="booking.html" class="btn btn-primary" style="padding: 8px 20px; color: var(--primary);">Book Now</a></li>
+                    <li>
+                        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Switch to dark mode" aria-live="polite">🌙</button>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="hamburger" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+
+    <main id="main-content">
+
+        <section class="section-padding" style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--text-on-dark); text-align: center; padding-top: 140px; padding-bottom: 60px;">
+            <div class="container">
+                <h1 style="color: var(--text-on-dark); font-size: 3rem; margin-bottom: 10px;">Our Eco Adventure Tours</h1>
+                <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto; color: rgba(255, 255, 255, 0.85);">Low impact, high adventure. Fully guided experiences designed for small groups.</p>
+            </div>
+        </section>
+
+
+        <section class="section-padding">
+            <div class="container">
+
+                <div class="filter-container" aria-label="Filter tours by category">
+                    <button class="filter-btn active" data-filter="all">All Packages</button>
+                    <button class="filter-btn" data-filter="hiking">Hiking</button>
+                    <button class="filter-btn" data-filter="camping">Camping</button>
+                    <button class="filter-btn" data-filter="cycling">Cycling</button>
+                    <button class="filter-btn" data-filter="water">River Rafting</button>
+                </div>
+
+                
+                <div class="tours-grid">
+                    
+                    <article class="tour-card" data-category="hiking">
+                        <div class="tour-img-wrapper">
+                            <span class="tour-badge">Best Seller</span>
+                            <img src="images/hiking.png" alt="Group hiking in alpine woods">
+                        </div>
+                        <div class="tour-content">
+                            <div class="tour-meta">
+                                <span>⏱️ 3 Days / 2 Nights</span>
+                                <span>🥾 Moderate</span>
+                            </div>
+                            <h3>Alpine Forest Ridge Hike</h3>
+                            <p>Trek through scenic alpine ridges and ancient pine woodlands. Learn forest ecology, trace flora routes, and camp in designated bio-reserves.</p>
+                            <div style="margin-bottom: 15px;">
+                                <strong style="font-size: 0.9rem; display: block; margin-bottom: 5px;">What's Included:</strong>
+                                <ul style="font-size: 0.85rem; color: var(--text-muted); list-style: inside circle;">
+                                    <li>Certified Wilderness Eco-Guides</li>
+                                    <li>All low-impact camping gear</li>
+                                    <li>Organic farm-to-table dining</li>
+                                    <li>Carbon offset certificate</li>
+                                </ul>
+                            </div>
+                            <div class="tour-price-footer">
+                                <span class="tour-price">Rs. 20,000 <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">/ person</span></span>
+                                <a href="booking.html?package=hiking" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.9rem; color: var(--primary);">Book Now</a>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <article class="tour-card" data-category="camping">
+                        <div class="tour-img-wrapper">
+                            <span class="tour-badge">Zero Waste</span>
+                            <img src="images/camping.png" alt="Twilight campsite setup under stars near lake">
+                        </div>
+                        <div class="tour-content">
+                            <div class="tour-meta">
+                                <span>⏱️ 2 Nights</span>
+                                <span>⛺ Easy</span>
+                            </div>
+                            <h3>Eco Wilderness Campout</h3>
+                            <p>Reconnect with nature by a crystal clear alpine lake. Focuses on low-impact outdoor living, astronomy, campfire storytelling, and clean waste sorting.</p>
+                            <div style="margin-bottom: 15px;">
+                                <strong style="font-size: 0.9rem; display: block; margin-bottom: 5px;">What's Included:</strong>
+                                <ul style="font-size: 0.85rem; color: var(--text-muted); list-style: inside circle;">
+                                    <li>Campsite permit & fees</li>
+                                    <li>Sleeping pad and sub-zero tent</li>
+                                    <li>Solar-powered kitchen tools</li>
+                                    <li>Biodiversity education seminar</li>
+                                </ul>
+                            </div>
+                            <div class="tour-price-footer">
+                                <span class="tour-price">Rs. 15,000 <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">/ person</span></span>
+                                <a href="booking.html?package=camping" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.9rem; color: var(--primary);">Book Now</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    
+                    <article class="tour-card" data-category="cycling">
+                        <div class="tour-img-wrapper">
+                            <span class="tour-badge">Active</span>
+                            <img src="images/cycling.png" alt="Cyclist riding downhill on a green mountain path">
+                        </div>
+                        <div class="tour-content">
+                            <div class="tour-meta">
+                                <span>⏱️ 2 Days</span>
+                                <span>🚴 Moderate</span>
+                            </div>
+                            <h3>Green Valley Cycling Trek</h3>
+                            <p>Cycle along scenic eco-trails in local farm valleys. Stop at bio-farms, taste fresh organic food, and enjoy non-motorized sightseeing.</p>
+                            <div style="margin-bottom: 15px;">
+                                <strong style="font-size: 0.9rem; display: block; margin-bottom: 5px;">What's Included:</strong>
+                                <ul style="font-size: 0.85rem; color: var(--text-muted); list-style: inside circle;">
+                                    <li>Premium multi-gear mountain bike</li>
+                                    <li>Safety gear and support vehicle</li>
+                                    <li>Local organic lunch basket</li>
+                                    <li>Guided farm exploration passes</li>
+                                </ul>
+                            </div>
+                            <div class="tour-price-footer">
+                                <span class="tour-price">Rs. 18,000 <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">/ person</span></span>
+                                <a href="booking.html?package=cycling" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.9rem; color: var(--primary);">Book Now</a>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <article class="tour-card" data-category="water">
+                        <div class="tour-img-wrapper">
+                            <span class="tour-badge">Adrenaline</span>
+                            <img src="images/rafting.png" alt="People paddling raft in white water river">
+                        </div>
+                        <div class="tour-content">
+                            <div class="tour-meta">
+                                <span>⏱️ 1 Day</span>
+                                <span>🛶 Hard</span>
+                            </div>
+                            <h3>Canyon Rapids River Rafting</h3>
+                            <p>Experience the sheer force of pure water in local river canyons. Learn river preservation, safe rapids handling, and riverbank ecosystem structure.</p>
+                            <div style="margin-bottom: 15px;">
+                                <strong style="font-size: 0.9rem; display: block; margin-bottom: 5px;">What's Included:</strong>
+                                <ul style="font-size: 0.85rem; color: var(--text-muted); list-style: inside circle;">
+                                    <li>Professional raft crew & navigator</li>
+                                    <li>Life jackets & safety helmets</li>
+                                    <li>Riverbank picnic lunch (zero-waste)</li>
+                                    <li>River protection donation</li>
+                                </ul>
+                            </div>
+                            <div class="tour-price-footer">
+                                <span class="tour-price">Rs.8,000 <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">/ person</span></span>
+                                <a href="booking.html?package=rafting" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.9rem; color: var(--primary);">Book Now</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>EcoXplore</h3>
+                    <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; margin-top: 15px;">A certified eco-travel agency offering carbon-neutral, educational, and low-footprint outdoor adventure experiences across global destinations.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="tours.html">Tours & Packages</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="booking.html">Book / Enquire</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                  <h3>Get in Touch</h3>
+                    <p>📍No20, Gallface Road, Colombo 03 </p>
+                    <p>📞 011 299 0007</p>
+                    <p>✉️ hello@ecoxploreadventures.com</p>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Join our green travel newsletter for discount codes and green travel tips.</p>
+                    <form class="newsletter-form" action="#" onsubmit="alert('Thank you for subscribing!'); return false;">
+                        <input type="email" placeholder="Your email address" required aria-label="Email address for newsletter">
+                        <button type="submit">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EcoXplore Adventures Ltd. All rights reserved.</p>
+                <p>Designed in compliance with WCAG 2.1 AA Standards.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

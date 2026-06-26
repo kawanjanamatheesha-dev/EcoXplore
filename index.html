@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoXplore Adventures offers sustainable, eco-friendly tour packages including hiking, camping, cycling, and river rafting. Explore the beauty of nature while preserving it.">
+    <title>EcoXplore Adventures | Sustainable Eco-Tourism & Adventure Packages</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo" aria-label="EcoXplore Adventures Home">
+                <span>Eco</span>Xplore 🌲
+            </a>
+            
+            <nav id="nav-menu" aria-label="Main Navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="tours.html">Tours & Packages</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="booking.html" class="btn btn-primary" style="padding: 8px 20px; color: var(--primary);">Book Now</a></li>
+                    <li>
+                        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Switch to dark mode" aria-live="polite">🌙</button>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="hamburger" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" aria-label="Introduction Banner">
+            <div class="container hero-content">
+                <h1>Explore Nature, Preserve the Future</h1>
+                <p>Join EcoXplore Adventures for eco-friendly, carbon-offset adventure tour packages. Experience hiking, camping, cycling, and rafting while keeping ecosystems safe.</p>
+                <div class="hero-btns">
+                    <a href="tours.html" class="btn btn-primary">Discover Packages</a>
+                    <a href="booking.html" class="btn btn-outline">Enquire Online</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Introduction Section -->
+        <section class="section-padding" aria-labelledby="mission-title">
+            <div class="container grid-2">
+                <div>
+                    <h2 id="mission-title" style="font-size: 2.25rem; margin-bottom: 20px; position: relative; padding-bottom: 10px;">
+                        Our Sustainable Mission
+                        <span style="display: block; width: 50px; height: 3px; background-color: var(--accent); margin-top: 10px;"></span>
+                    </h2>
+                    <p style="margin-bottom: 15px; color: var(--text-muted);">EcoXplore Adventures is dedicated to creating positive ecological footprints. We merge the thrill of adventure travel with conservation projects, environmental education, and community-led initiatives.</p>
+                    <p style="margin-bottom: 25px; color: var(--text-muted);">Every tour we run adheres to strict leave-no-trace principles, and 10% of all booking revenues are donated directly to local forest and river rehabilitation projects.</p>
+                    <a href="about.html" class="btn btn-outline">Learn More About Us</a>
+                </div>
+                <div style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow);">
+                    <img src="images/hero.png" alt="Eco-tourists looking out over lush green forest canopy" style="width: 100%; height: 400px; object-fit: cover;">
+                    <div style="position: absolute; bottom: 20px; left: 20px; background: rgba(0,0,0,0.7); color: #fff; padding: 10px 15px; border-radius: 6px; font-size: 0.9rem;">
+                        📍 EcoXplore Forest Reserve
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Tours Section -->
+        <section class="section-padding" style="background-color: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);" aria-labelledby="featured-title">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="featured-title">Featured Adventure Packages</h2>
+                    <p>Hand-picked journeys designed for minimum impact and maximum adventure.</p>
+                </div>
+                
+                <div class="tours-grid">
+                    <!-- Tour 1: Hiking -->
+                    <article class="tour-card" data-category="hiking">
+                        <div class="tour-img-wrapper">
+                            <span class="tour-badge">Best Seller</span>
+                            <img src="images/hiking.png" alt="Hikers with backpacks walking on forest path">
+                        </div>
+                        <div class="tour-content">
+                            <div class="tour-meta">
+                                <span>⏱️ 3 Days</span>
+                                <span>🥾 Moderate</span>
+                            </div>
+                            <h3>Alpine Forest Ridge Hike</h3>
+                            <p>Trek through ancient pine forests and alpine ridges. Includes guided leaf classification, natural shelter building, and zero-waste camp dining.</p>
+                            <div class="tour-price-footer">
+                                <span class="tour-price">Rs. 20,000</span>
+                                <a href="booking.html?package=hiking" class="btn btn-outline" style="padding: 6px 15px; font-size: 0.85rem;">Enquire</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tour 2: Camping -->
+                    <article class="tour-card" data-category="camping">
+                        <div class="tour-img-wrapper">
+                            <span class="tour-badge">Eco Choice</span>
+                            <img src="images/camping.png" alt="Tent campsite under starry night sky near lake">
+                        </div>
+                        <div class="tour-content">
+                            <div class="tour-meta">
+                                <span>⏱️ 2 Nights</span>
+                                <span>⛺ Easy</span>
+                            </div>
+                            <h3>Eco Wilderness Campout</h3>
+                            <p>Camp under starry skies next to clean water bodies. Learn stargazing, local cooking, and practice low-emission campsite waste reduction.</p>
+                            <div class="tour-price-footer">
+                                <span class="tour-price">Rs. 15,000</span>
+                                <a href="booking.html?package=camping" class="btn btn-outline" style="padding: 6px 15px; font-size: 0.85rem;">Enquire</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Tour 3: River Rafting -->
+                    <article class="tour-card" data-category="water">
+                        <div class="tour-img-wrapper">
+                            <span class="tour-badge">Adrenaline</span>
+                            <img src="images/rafting.png" alt="People in an inflatable raft navigating white water rapids">
+                        </div>
+                        <div class="tour-content">
+                            <div class="tour-meta">
+                                <span>⏱️ 1 Day</span>
+                                <span>🛶 Hard</span>
+                            </div>
+                            <h3>Canyon Rapids River Rafting</h3>
+                            <p>Conquer thrilling class III-IV white water rapids in a protected canyon. Learn about river hydrology and clean river rehabilitation.</p>
+                            <div class="tour-price-footer">
+                                <span class="tour-price">Rs.8,000</span>
+                                <a href="booking.html?package=rafting" class="btn btn-outline" style="padding: 6px 15px; font-size: 0.85rem;">Enquire</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="tours.html" class="btn btn-primary">See All Packages</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>EcoXplore</h3>
+                    <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; margin-top: 15px;">A certified eco-travel agency offering carbon-neutral, educational, and low-footprint outdoor adventure experiences across global destinations.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="tours.html">Tours & Packages</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="booking.html">Book / Enquire</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                  <h3>Get in Touch</h3>
+                    <p>📍No20, Gallface Road, Colombo 03 </p>
+                    <p>📞 011 299 0007</p>
+                    <p>✉️ hello@ecoxploreadventures.com</p>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Join our green travel newsletter for discount codes and green travel tips.</p>
+                    <form class="newsletter-form" action="#" onsubmit="alert('Thank you for subscribing!'); return false;">
+                        <input type="email" placeholder="Your email address" required aria-label="Email address for newsletter">
+                        <button type="submit">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EcoXplore Adventures Ltd. All rights reserved.</p>
+                <p>Designed in compliance with WCAG 2.1 AA Standards.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
