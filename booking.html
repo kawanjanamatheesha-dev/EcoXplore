@@ -8,10 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Accessibility Skip Link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Header & Navigation -->
     <header>
         <div class="container navbar">
             <a href="index.html" class="logo" aria-label="EcoXplore Adventures Home">
@@ -39,9 +37,7 @@
         </div>
     </header>
 
-    <!-- Main Content Area -->
     <main id="main-content">
-        <!-- Inner Banner -->
         <section class="section-padding" style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--text-on-dark); text-align: center; padding-top: 140px; padding-bottom: 60px;">
             <div class="container">
                 <h1 style="color: var(--text-on-dark); font-size: 3rem; margin-bottom: 10px;">Inquire Online</h1>
@@ -49,32 +45,26 @@
             </div>
         </section>
 
-        <!-- Booking Form Section -->
         <section class="section-padding">
             <div class="container">
-                <!-- Success Banner -->
                 <div id="success-banner" class="success-banner" role="alert"></div>
 
                 <div class="form-container">
                     <h2 style="font-size: 1.75rem; margin-bottom: 25px; text-align: center; border-bottom: 2px solid var(--border); padding-bottom: 15px;">Booking Enquiry Form</h2>
                     
                     <form id="booking-form" novalidate>
-                        <!-- Full Name -->
                         <div class="form-group">
                             <label for="name">Full Name <span style="color: #dc3545;">*</span></label>
                             <input type="text" id="name" name="name" class="form-control" placeholder="e.g. Maneesha Ileperuma" required>
                             <span class="error-message" role="alert" id="name-error">Please enter your full name.</span>
                         </div>
 
-                        <!-- Contact Row (Email and Phone) -->
                         <div class="form-row">
-                            <!-- Email -->
                             <div class="form-group">
                                 <label for="email">Email Address <span style="color: #dc3545;">*</span></label>
                                 <input type="email" id="email" name="email" class="form-control" placeholder="maneeshail@example.com" required>
                                 <span class="error-message" role="alert" id="email-error">Please enter a valid email address.</span>
                             </div>
-                            <!-- Phone -->
                             <div class="form-group">
                                 <label for="phone">Phone Number <span style="color: #dc3545;">*</span></label>
                                 <input type="tel" id="phone" name="phone" class="form-control" placeholder="+94 75 068 5536" required>
@@ -82,9 +72,7 @@
                             </div>
                         </div>
 
-                        <!-- Tour details row -->
                         <div class="form-row">
-                            <!-- Tour Package selection -->
                             <div class="form-group">
                                 <label for="tour-package">Select Adventure Package <span style="color: #dc3545;">*</span></label>
                                 <select id="tour-package" name="tour-package" class="form-control" required>
@@ -97,21 +85,17 @@
                                 <span class="error-message" role="alert" id="package-error">Please select an adventure package.</span>
                             </div>
 
-                            <!-- Preferred Start Date -->
                             <div class="form-group">
                                 <label for="date">Preferred Start Date <span style="color: #dc3545;">*</span></label>
                                 <input type="date" id="date" name="date" class="form-control" required>
                                 <span class="error-message" role="alert" id="date-error">Please select a future start date.</span>
                             </div>
                         </div>
-
-                        <!-- Group Size -->
                         <div class="form-group">
                             <label for="group-size">Number of Travellers</label>
                             <input type="number" id="group-size" name="group-size" class="form-control" min="1" max="25" value="1">
                         </div>
 
-                        <!-- Custom Notes -->
                         <div class="form-group">
                             <label for="notes">Additional Requirements or Comments (Optional)</label>
                             <textarea id="notes" name="notes" class="form-control" rows="4" placeholder="Mention any dietary requirements, physical considerations, or travel questions..."></textarea>
@@ -124,7 +108,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
