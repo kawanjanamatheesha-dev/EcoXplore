@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // -------------------------------------------------------------
-    // 1. Mobile Menu Toggle
-    // -------------------------------------------------------------
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
 
@@ -9,12 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             hamburger.classList.toggle('active');
-            // Accessibility: Update ARIA attributes
             const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
             hamburger.setAttribute('aria-expanded', !expanded);
         });
 
-        // Close menu when clicking a link
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
@@ -24,14 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // -------------------------------------------------------------
-    // 2. Dark/Light Theme Switcher
-    // -------------------------------------------------------------
     const themeToggleBtn = document.getElementById('theme-toggle');
     const body = document.body;
 
     if (themeToggleBtn) {
-        // Check saved theme or default to system preference
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme) {
             body.classList.toggle('dark-theme', savedTheme === 'dark');
@@ -55,16 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
         themeToggleBtn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
     }
 
-    // -------------------------------------------------------------
-    // 3. Tours Category Filter (Tours Page)
-    // -------------------------------------------------------------
     const filterButtons = document.querySelectorAll('.filter-btn');
     const tourCards = document.querySelectorAll('.tour-card');
 
     if (filterButtons.length > 0 && tourCards.length > 0) {
         filterButtons.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Remove active class from other buttons
                 filterButtons.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 
@@ -73,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 tourCards.forEach(card => {
                     if (filter === 'all' || card.getAttribute('data-category') === filter) {
                         card.style.display = 'flex';
-                        // Add fade-in effect
                         card.style.animation = 'fadeInUp 0.5s ease forwards';
                     } else {
                         card.style.display = 'none';
@@ -83,9 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // -------------------------------------------------------------
-    // 4. Gallery Lightbox Slider (Gallery Page)
-    // -------------------------------------------------------------
     const galleryItems = document.querySelectorAll('.gallery-item');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
@@ -97,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentGalleryIndex = 0;
     const galleryData = [];
 
-    // Collect gallery images data
     galleryItems.forEach((item, index) => {
         const img = item.querySelector('img');
         const h3 = item.querySelector('h3');
@@ -119,14 +101,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!lightbox || !lightboxImg || !lightboxCaption) return;
         updateLightboxContent();
         lightbox.classList.add('active');
-        lightbox.focus(); // Focus lightbox for keyboard navigation
-        document.body.style.overflow = 'hidden'; // Stop scroll
+        lightbox.focus();
+        document.body.style.overflow = 'hidden';
     }
 
     function closeLightbox() {
         if (!lightbox) return;
         lightbox.classList.remove('active');
-        document.body.style.overflow = ''; // Restore scroll
+        document.body.style.overflow = '';
     }
 
     function updateLightboxContent() {
@@ -148,7 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updateLightboxContent();
     });
 
-    // Close lightbox on click outside the image
     if (lightbox) {
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) {
@@ -156,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Keyboard Navigation for Lightbox
         window.addEventListener('keydown', (e) => {
             if (!lightbox.classList.contains('active')) return;
             if (e.key === 'Escape') closeLightbox();
@@ -165,19 +145,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // -------------------------------------------------------------
-    // 5. Booking Form Validation & Prefill (Booking Page)
-    // -------------------------------------------------------------
     const bookingForm = document.getElementById('booking-form');
     const successBanner = document.getElementById('success-banner');
 
-    // Auto-select package based on URL search params (e.g. booking.html?package=hiking)
     const urlParams = new URLSearchParams(window.location.search);
     const tourPackageParam = urlParams.get('package');
     const packageSelect = document.getElementById('tour-package');
 
     if (packageSelect && tourPackageParam) {
-        // Match option values
         for (let option of packageSelect.options) {
             if (option.value === tourPackageParam.toLowerCase()) {
                 option.selected = true;
@@ -191,20 +166,17 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             let isValid = true;
 
-            // Reset error classes and messages
             const inputs = bookingForm.querySelectorAll('.form-control');
             inputs.forEach(input => {
                 input.classList.remove('error');
             });
 
-            // Validate Name
             const nameInput = document.getElementById('name');
             if (nameInput.value.trim() === '') {
                 showError(nameInput, 'Please enter your full name');
                 isValid = false;
             }
 
-            // Validate Email
             const emailInput = document.getElementById('email');
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (emailInput.value.trim() === '') {
@@ -215,7 +187,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 isValid = false;
             }
 
-            // Validate Phone
             const phoneInput = document.getElementById('phone');
             const phoneRegex = /^\+?[0-9\s\-()]{7,15}$/;
             if (phoneInput.value.trim() === '') {
@@ -226,13 +197,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 isValid = false;
             }
 
-            // Validate Package Selection
             if (packageSelect && packageSelect.value === '') {
                 showError(packageSelect, 'Please select a tour package');
                 isValid = false;
             }
 
-            // Validate Date (Check-in/Start Date)
             const dateInput = document.getElementById('date');
             if (dateInput && dateInput.value === '') {
                 showError(dateInput, 'Please select your preferred start date');
@@ -247,7 +216,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
-            // Show success banner if form is valid
             if (isValid) {
                 if (successBanner) {
                     successBanner.textContent = `Thank you, ${nameInput.value.trim()}! Your booking inquiry for the ${packageSelect.options[packageSelect.selectedIndex].text} package has been submitted successfully.`;
@@ -265,11 +233,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (errMsg) {
                 errMsg.textContent = message;
             }
-            // Accessibility: Announce error message via screen readers
             inputElement.setAttribute('aria-invalid', 'true');
         }
 
-        // Clear error class on typing
         const inputs = bookingForm.querySelectorAll('.form-control');
         inputs.forEach(input => {
             input.addEventListener('input', () => {
