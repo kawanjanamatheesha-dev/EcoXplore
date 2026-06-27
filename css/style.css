@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap');
 
-/* CSS Custom Properties / Tokens */
 :root {
-    /* Color Palette */
     --primary-h: 156;
     --primary-s: 42%;
     --primary-l: 18%;
@@ -12,7 +10,6 @@
     --accent: hsl(172, 66%, 45%);
     --accent-light: hsl(172, 66%, 55%);
     
-    /* Theme Light (Default) */
     --bg-main: hsl(120, 15%, 97%);
     --bg-card: hsl(0, 0%, 100%);
     --bg-header: hsla(156, 42%, 18%, 0.95);
@@ -24,19 +21,13 @@
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.12);
     
-    /* Font Families */
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
-    
-    /* Transitions */
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    
-    /* Layout Constants */
     --container-width: 1200px;
     --header-height: 80px;
 }
 
-/* Dark Mode Tokens */
 body.dark-theme {
     --bg-main: hsl(156, 25%, 8%);
     --bg-card: hsl(156, 20%, 12%);
@@ -49,7 +40,6 @@ body.dark-theme {
     --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-/* Global Reset & Base Styles */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -98,7 +88,6 @@ button, input, select, textarea {
     font-size: inherit;
 }
 
-/* Skip Link for Accessibility */
 .skip-link {
     position: absolute;
     top: -100px;
@@ -116,7 +105,6 @@ button, input, select, textarea {
     top: 20px;
 }
 
-/* Layout Utilities */
 .container {
     width: 90%;
     max-width: var(--container-width);
@@ -147,7 +135,6 @@ button, input, select, textarea {
     gap: 20px;
 }
 
-/* Header & Navigation */
 header {
     background-color: var(--bg-header);
     position: fixed;
@@ -211,7 +198,6 @@ header {
     width: 100%;
 }
 
-/* Dark/Light Toggler styling */
 .theme-toggle-btn {
     background: transparent;
     border: none;
@@ -250,7 +236,6 @@ header {
     transition: var(--transition);
 }
 
-/* Footer Styling */
 footer {
     background-color: var(--bg-footer);
     color: var(--text-on-dark);
@@ -342,7 +327,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Button Component */
 .btn {
     display: inline-block;
     padding: 12px 28px;
@@ -382,7 +366,6 @@ footer {
     outline-offset: 2px;
 }
 
-/* Hero Section */
 .hero {
     height: 100vh;
     background: linear-gradient(135deg, rgba(27, 67, 50, 0.9), rgba(45, 106, 79, 0.75)), url('../images/hero.png') no-repeat center center/cover;
@@ -418,7 +401,6 @@ footer {
     gap: 20px;
 }
 
-/* Featured Section */
 .section-title {
     text-align: center;
     margin-bottom: 50px;
@@ -447,7 +429,6 @@ footer {
     font-size: 1.1rem;
 }
 
-/* Tour Cards */
 .tours-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -546,7 +527,6 @@ footer {
     color: var(--secondary);
 }
 
-/* About Us Page Specifics */
 .about-mission-section {
     background-color: var(--bg-card);
     padding: 60px 0;
@@ -602,7 +582,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Tours Page Filter */
 .filter-container {
     display: flex;
     justify-content: center;
@@ -627,7 +606,6 @@ footer {
     border-color: var(--accent);
 }
 
-/* Gallery Grid & Lightbox */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -687,7 +665,6 @@ footer {
     color: var(--accent);
 }
 
-/* Lightbox Modal */
 .lightbox {
     position: fixed;
     top: 0;
@@ -770,7 +747,6 @@ footer {
     right: 40px;
 }
 
-/* Booking Form styling */
 .form-container {
     background-color: var(--bg-card);
     padding: 40px;
@@ -840,7 +816,6 @@ footer {
     font-weight: 500;
 }
 
-/* Keyframe Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -852,7 +827,6 @@ footer {
     }
 }
 
-/* Responsive Media Queries */
 @media (max-width: 1024px) {
     .grid-3, .tours-grid, .team-grid {
         grid-template-columns: repeat(2, 1fr);
